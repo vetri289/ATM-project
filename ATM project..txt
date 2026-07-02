@@ -1,0 +1,81 @@
+#include<stdio.h>
+  void cashwithdraw();
+  void cashdeposite();
+  void balancecheck();
+  void about();
+  int amount =10000;
+int main(){ 
+    int a; 
+    printf("pls insert a card :");
+    scanf("%d",&a);
+    if(a==1){
+        printf("the card insert sucessfully\n");
+    }
+    int b;
+    printf("enter the number :");
+    scanf("%d",&b);
+    int menu=b;
+    switch( menu){
+        case 1:
+        printf(" cash withdraw:\n");
+         cashwithdraw();
+        break;
+        case 2:
+        printf(" cash deposite:\n");
+        cashdeposite();
+        break;
+        case 3:
+          printf("balance check:\n ");
+          balancecheck();
+        break;
+        case 4:
+          printf(" about:\n");
+        about();
+        break;
+        default:
+        printf("enter the value with in 4");
+    }
+}
+void cashwithdraw(){
+        int e;
+        int f;
+        printf("enter the pin:");
+        scanf("%d",&e);
+        if(e==2004){
+            printf("sucessfully pin enter.\n");
+            printf("enter the amount to withdraw:");
+            scanf("%d",&f);
+            int r=amount-f;
+            printf("%d you got the amount.\n",f );
+            printf("%d remaining amount.\n",r);
+        }else{
+            printf("retry");
+        }
+  }
+ void cashdeposite(){
+    int y;
+    int g;
+    printf("enter the pin :");
+    scanf("%d",&y);
+    if(y==2004){
+        printf("sucessfuly enter the pin\n");
+    printf(" put the amount to deposite\n");
+    scanf("%d",&g);
+    int m=amount+g;
+    printf("%d your amount to deposit:\n",g);
+    printf("%d total amount on your account:\n",m);
+    }else{
+        printf("retry");
+    }
+}
+void balancecheck(){
+    int j;
+    printf("enter the pin:");
+    scanf("%d",&j);
+    if(j==2004){
+        printf("%d the balance amount :",amount);
+    }
+}
+void about(){
+   printf("this is have more infermation to know more knwledge");
+}
